@@ -27,14 +27,50 @@ function render(variables = {}) {
   // here we ask the logical questions to make decisions on how to build the html
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
 
+  //valido todos los campos cover, name, lastname, SMP, todas las RRSS, role, city
+
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
   let nombre = `Name`;
-  if (variables.name !== null) nombre = variables.name;
+  if (variables.name !== null) {
+    nombre = variables.name;
+  }
 
   let lastName = `Last Name`;
-  if (variables.lastName !== null) lastName = variables.lastName;
+  if (variables.lastName !== null) {
+    lastName = variables.lastName;
+  }
+
+  let twitter = `Twitter`;
+  if (variables.twitter !== null) {
+    twitter = "https://twitter.com/" + variables.twitter;
+  }
+
+  let github = `GitHub`;
+  if (variables.github !== null) {
+    github = "https://github.com/" + variables.github;
+  }
+
+  let linkedin = `LinkeDin`;
+  if (variables.linkedin !== null) {
+    linkedin = "https://linkedin.com/" + variables.linkedin;
+  }
+
+  let instagram = `Instagram`;
+  if (variables.instagram !== null) {
+    instagram = "https://instagram.com/" + variables.instagram;
+  }
+
+  let role = `Role`;
+  if (variables.role !== null) {
+    role = variables.role;
+  }
+
+  let city = `City`;
+  if (variables.city !== null) {
+    city = variables.city;
+  }
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
@@ -46,7 +82,7 @@ function render(variables = {}) {
           <h2>${variables.role || "Role"} </h2> 
           <h3>${variables.city || "City"}, ${variables.country ||
     "Country"}</h3>
-
+ 
         <ul class="${variables.socialMediaPosition}">
             <li><a href="https://twitter.com/4geeksacademy" target="_blank" ><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/4geeksacademy" target="_blank"><i class="fab fa-github"></i></a></li>
