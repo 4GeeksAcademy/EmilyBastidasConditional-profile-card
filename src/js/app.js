@@ -42,24 +42,24 @@ function render(variables = {}) {
     lastName = variables.lastName;
   }
 
-  let twitter = `Twitter`;
+  let twitter = `4geeksacademy`;
   if (variables.twitter !== null) {
-    twitter = "https://twitter.com/" + variables.twitter;
+    twitter = variables.twitter;
   }
 
-  let github = `GitHub`;
+  let github = `4geeksacademy`;
   if (variables.github !== null) {
-    github = "https://github.com/" + variables.github;
+    github = variables.github;
   }
 
-  let linkedin = `LinkeDin`;
+  let linkedin = `4geeksacademy`;
   if (variables.linkedin !== null) {
-    linkedin = "https://linkedin.com/" + variables.linkedin;
+    linkedin = variables.linkedin;
   }
 
-  let instagram = `Instagram`;
+  let instagram = `4geeksacademy`;
   if (variables.instagram !== null) {
-    instagram = "https://instagram.com/" + variables.instagram;
+    instagram = variables.instagram;
   }
 
   let role = `Role`;
@@ -84,10 +84,10 @@ function render(variables = {}) {
     "Country"}</h3>
  
         <ul class="${variables.socialMediaPosition}">
-            <li><a href="https://twitter.com/4geeksacademy" target="_blank" ><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/${twitter}" target="_blank" ><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${github}" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/school/${linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${instagram}" target="_blank"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
